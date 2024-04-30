@@ -12,6 +12,7 @@ const Home = () => {
     const [selectedRoom, selectRoom] = useState(-1)
     const [message, setMessage] = useState('');
 
+    // Socket Connection to get Updated list of rooms whenever someone makes changes to db.
     useEffect(() => {
         // Connect to the WebSocket server
         const socket = io('http://localhost:8000');
@@ -66,6 +67,7 @@ const Home = () => {
         }
     }
 
+    // API request to get the list of rooms and their availability
     useEffect(() => {
         axios.get("http://localhost:8000/getRooms").then((res) => {
             updateRoomData(res.data)

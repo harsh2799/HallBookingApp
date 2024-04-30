@@ -59,8 +59,9 @@ const SelectedRoom = ({updateRoomData, updateSearchData, index, number, features
                        "18:00 - 18:30", "18:30 - 19:00"]
    return (
     <div className='card' id={index}>
+        <h2>Room: {number}</h2>
         <input type='date' id="date" min={getFormattedDate()} onChange={changeDate} value={selectedDate}/>
-        <h2>{number}</h2>
+        <hr />
         <div className='feature-list'>
             {features.map((feature, index) => {
                 return <span key={index} className='feature'>{feature}</span>
