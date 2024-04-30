@@ -75,7 +75,7 @@ const Home = () => {
 
     return (
     <div>
-        <input type="text" name="search" onChange={updateSearchFor}  id="search"/>
+        <input type="text" name="search" placeholder='Search' onChange={updateSearchFor}  id="search"/>
         <button onClick={searchForRoom} > Search </button>
         <div className='room-display'>
             <div>

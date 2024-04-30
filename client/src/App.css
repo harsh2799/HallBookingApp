@@ -15,8 +15,10 @@
 
 .feature-list {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  width: 100%;
+  gap: 2;
+  /* flex-direction: row;
+  justify-content: space-between; */
 }
 
 .feature {
@@ -41,10 +43,15 @@
 
 .slot {
   padding: 8px;
-  color: black;
   display: inline-block;
   cursor: pointer;
+  outline: none;
+  border: none;
   margin: 5px;
+  appearance: button;
+  border-radius: 8px;
+  border-style: none;
+  box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
 }
 
 .slot:hover {
@@ -65,4 +72,67 @@
 
 .slot-booked-by-me {
   background-color: green !important;
+}
+
+/* CSS */
+button {
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:hover,
+button:focus {
+  background-color: #F082AC;
+}
+
+/* CSS */
+.feature {
+  align-items: center;
+  appearance: button;
+  background-color: #0276FF;
+  border-radius: 8px;
+  border-style: none;
+  box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  margin: 4px;
+}
+
+input {
+  font-size: 16px;
+  line-height: 1.5;
+  border: none;
+  background: #FFFFFF;
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+  background-size: 20px 20px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.08);
+  border-radius: 5px;
+  width: 300px;
+  padding: .5em 1em .5em 2.5em;
 }
